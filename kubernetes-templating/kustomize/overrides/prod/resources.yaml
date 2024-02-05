@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-cart
+spec:
+  template:
+    spec:
+      containers:
+        - name: server
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: 125m
+            requests:
+              memory: 200Mi
+              cpu: 70m
